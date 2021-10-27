@@ -4,14 +4,14 @@
 /*~ This template shows how to write a global plugin. */
 
 interface Window {
-    WavesKeeper: WavesKeeper.TWavesKeeperApi;
+    TurtleShell: TurtleShell.TTurtleShellApi;
 }
 
-declare var WavesKeeper: WavesKeeper.TWavesKeeperApi;
+declare var TurtleShell: TurtleShell.TTurtleShellApi;
 
-declare namespace WavesKeeper {
+declare namespace TurtleShell {
 
-    type TWavesKeeperApi = {
+    type TTurtleShellApi = {
         /**
          * This is a method for obtaining a signature of authorization data while verifying Waves' user.
          * @param data
@@ -134,8 +134,8 @@ declare namespace WavesKeeper {
         on(event: 'update', cb: (state: IPublicStateResponse) => any): object;
 
         /**
-         * On initialize window.WavesKeeper has no api methods.
-         * You can use WavesKeeper.initialPromise for waiting end initializing api
+         * On initialize window.TurtleShell has no api methods.
+         * You can use TurtleShell.initialPromise for waiting end initializing api
          */
         initialPromise : Promise<any>;
 
