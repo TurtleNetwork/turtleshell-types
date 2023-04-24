@@ -280,7 +280,8 @@ declare namespace TurtleShell {
     }
 
     type TSignCancelOrderData = ISignData<1003, ICancelOrderData>;
-
+    type TSignCancelOrderDataPublish = ISignData<1003,string,string, ICancelOrderData>;
+    
     interface ISignOrderDataBody {
         /**
          * MoneyLike - amount
