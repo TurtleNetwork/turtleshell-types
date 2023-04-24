@@ -28,7 +28,7 @@ declare namespace TurtleShell {
          * It works identically to signCancelOrder, but also tries to send data to the matcher.
          * @param data
          */
-        signAndPublishCancelOrder(data: TSignCancelOrderData): Promise<string>;
+        signAndPublishCancelOrder(data: TSignCancelOrderDataPublish): Promise<string>;
 
         /**
          * Waves Keeper's method for creating an order to the matcher is identical to signOrder
@@ -280,8 +280,9 @@ declare namespace TurtleShell {
     }
 
     type TSignCancelOrderData = ISignData<1003, ICancelOrderData>;
+    // @ts-ignore
     type TSignCancelOrderDataPublish = ISignData<1003,string,string, ICancelOrderData>;
-    
+
     interface ISignOrderDataBody {
         /**
          * MoneyLike - amount
